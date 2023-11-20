@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuarios.Menu">
+
+    <ContentPage.Content>
+        <StackLayout >
+            <!-- Agregar la bienvenida y el nombre de usuario -->
+            <Image Source="Logo.png" HeightRequest="70" Margin="0,30,0,10"/>
+            <Label Text="Bienvenido a UTRABS" FontAttributes="Bold" HorizontalOptions="Center" FontSize="20" Margin="20,10,20,20" />
+
+            <Label Text="En este apartado podra dirigirte a las paginas  de alta  dependiendo  de que tipo de altas  deaseas realizar, o si es el caso de querer realizar un seguimiento de curso." 
+                    FontSize="16" Margin="20,0,20,20"></Label>
+
+            <!-- Agregar los botones uno al lado del otro en una rejilla -->
+
+            <StackLayout>
+                <Label Margin="20,0,0,0" Text="Altas" FontAttributes="Bold" FontSize="25" />
+                <Grid VerticalOptions="FillAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Primer Frame -->
+                <Frame Grid.Row="1" Grid.Column="0" HasShadow="True" CornerRadius="10" Margin="20,10,5,0" Padding="0" HeightRequest="150" VerticalOptions="Start" >
+                    <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand" Margin="20,30,20,20">
+                            <Image Source="ACurso.png" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                            <StackLayout Spacing="3" HorizontalOptions="CenterAndExpand">
+                                <Label Text="Cursos" TextColor="Black" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button x:Name="btnCursos" Clicked="btnCursos_Clicked" HeightRequest="200" WidthRequest="2000" Background="transparent" HorizontalOptions="Center"  />
+                    </Grid>
+                </Frame>
+
+                <!-- Segundo Frame -->
+                    <Frame Grid.Row="1" Grid.Column="1" HasShadow="True" CornerRadius="10" Margin="5,10,20,0" Padding="0" HeightRequest="150" VerticalOptions="Start" >
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackLayout Orientation="Vertical" Spacing="10" HorizontalOptions="CenterAndExpand" Margin="20,30,20,20">
+                                <Image Source="AUsuario.png" HeightRequest="50" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+                                <StackLayout Spacing="3" HorizontalOptions="CenterAndExpand">
+                                    <Label Text="Empleados" TextColor="Black" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center"/>
+                                </StackLayout>
+                            </StackLayout>
+                            <Button x:Name="btnUsuarios" Clicked="btnEmpleados_Clicked" HeightRequest="200" WidthRequest="2000" Background="transparent" HorizontalOptions="Center"  />
+                        </Grid>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+            
+            <StackLayout>
+                <Frame  HasShadow="True" CornerRadius="10" HorizontalOptions="Center" Padding="0" HeightRequest="100" WidthRequest="900"  Margin="20,10,20,0">
+                    <Grid  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                            <Image Source="SCurso.png" HeightRequest="60" />
+                            <StackLayout Margin="10,15,0,0" HorizontalOptions="CenterAndExpand" >
+                                <Label Text="Seguimiento de cursos" TextColor="Black" FontAttributes="Bold" FontSize="20"/>
+                            </StackLayout>
+                        </StackLayout>
+                        <Button Padding="0,0,0,0" x:Name="btnSCursos" Clicked="btnSCursos_Clicked" HeightRequest="100" WidthRequest="500" Background="transparent" HorizontalOptions="Center"/>
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+            <Button CornerRadius="10" Padding="10" HorizontalOptions="End" Margin="16" VerticalOptions="End" Text="Logout" x:Name="BtnLogout" Clicked="BtnLogout_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

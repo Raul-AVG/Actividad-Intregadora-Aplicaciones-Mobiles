@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuarios.Registro">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Image Source="LoginWP.png" Aspect="Fill" HeightRequest="900" VerticalOptions="StartAndExpand" Grid.Row="0" Grid.ColumnSpan="2"/>
+            </StackLayout>
+            <Frame VerticalOptions="CenterAndExpand" BackgroundColor="white" CornerRadius="20" Padding="25"  Margin="10,-830,10,0">
+                <StackLayout >
+                    <Label Text="Registro" HorizontalOptions="Center" Margin="20" FontSize="30" FontAttributes="Bold"/>
+                    <StackLayout>
+                        <Label Text="Email" Margin="0,5"/>
+                        <Entry Placeholder="example@gmail.com" x:Name="txtEmailReg" Keyboard="Email" Margin="0,5"/>
+
+                        <Label Text="Cotraseña" Margin="0,5"/>
+                        <Entry Placeholder="*********" x:Name="txtContraReg" Margin="0,5"/>
+
+                        <Label Text="Nommbre Completo" Margin="0,5"/>
+                        <Entry Placeholder="Juan Perez" x:Name="txtNombreReg" Margin="0,5" />
+
+                        <Label Text="Edad" Margin="0,5"/>
+                        <Entry Placeholder="45" x:Name="txtEdadReg" Keyboard="Numeric" Margin="0,5" />
+
+                        <Button Text="Registrar" x:Name="btnRegistrar" Background="#1a3c7d" Margin="40,20" TextColor="White" Clicked="BtnRegistrar_Clicked" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+            <Label HorizontalOptions="End" Margin="0,0,20,100">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Regresar" FontSize="20" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>

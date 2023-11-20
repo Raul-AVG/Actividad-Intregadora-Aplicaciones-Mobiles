@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Usuarios.Login"
+             Background="white ">
+    
+    <ContentPage.Content>
+        
+        <StackLayout >
+            <StackLayout>
+                <Image Source="LoginWP.png" Aspect="Fill" HeightRequest="900" VerticalOptions="StartAndExpand" Grid.Row="0" Grid.ColumnSpan="2"/>
+            </StackLayout>
+
+            <Frame VerticalOptions="CenterAndExpand" BackgroundColor="Transparent" Padding="25"  Margin="10,-820,10,0">
+                <StackLayout>
+                    <Label FontSize="30" TextColor="White" FontAttributes="Bold" Text="¡Bienvenido!"></Label>
+                    <Label FontSize="20" TextColor="White"  Text="Inicia sesión con tu cuenta"></Label>
+                </StackLayout>
+            </Frame>
+
+            <Frame VerticalOptions="CenterAndExpand" BackgroundColor="white" CornerRadius="20" Padding="25"  Margin="10,-20,10,0">
+                <StackLayout >
+                    <Label Text="Inicio de Sesión" HorizontalOptions="Center" Margin="20" FontSize="30" FontAttributes="Bold"/>
+                    <StackLayout>
+                        <Entry Placeholder="Email" x:Name="txtEmailLog" Keyboard="Email" Margin="0,10" />
+                        <Entry Placeholder="Contraseña" x:Name="txtContraLog" IsPassword="True" Margin="0,10" />
+
+                        <Button Text="Iniciar Sesión" x:Name="btnLogin" BackgroundColor="#1a3c7d" TextColor="White" Clicked="BtnLogin_Clicked"  Margin="40,20" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+          
+
+            <Label HorizontalOptions="Center" Margin="0,0,0,100">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="¿No tiens cuenta aun? " />
+                        <Span Text="Registrarse" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
